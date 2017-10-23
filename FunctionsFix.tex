@@ -27,7 +27,7 @@ Di sini, kita mempertahankan referensi objek yang dilewati dan menambahkan nilai
 
 Ada satu contoh lagi di mana argumen dilewatkan melalui referensi dan rujukannya ditimpa di dalam fungsi yang disebut. 
 
-Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut: \par
+Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut:
 
 Anda dapat memanggil fungsi dengan menggunakan jenis argumen formal berikut: 
 Argumen yang dibutuhkan 
@@ -82,3 +82,17 @@ gunakan  kembali,  dengan  beberapa  nilai  yang  berbeda.
 Tentu saja kita tidak mungkin menuliskan kembali  kode  yang  ingin  dipanggil  ulang  tersebut.  
 Solusinya,  kita  dapat  mengelompokkan  kode-kode  yang sering dipanggil ulang dalam suatu kelompok kode yang disebut fungsi. 
 Selain  itu  juga  Anda  dapat  memecah  masalah  besar  menjadi  masalah-masalah  yang  lebih  kecil.  Dalam  C  atau  bahasa  pemrograman  lain,  biasanya  digunakan istilah function. 
+
+Beberapa hal yang perlu diperhatikan terkait dengan penggunaan fungsi :
+Deklarasi fungsi, digunakan kata kunci def, berguna untuk membuat obyek fungsi dan selanjutnya melakukan assignment obyek fungsi tersebut dengan sebuah nama.
+Pada istilah passing parameters by preference dn passing parameter by value, maka bahasa pemrograman Python melakukan passing parameter
+by assignment.
+Sepertivariabel, kita perlu mendeklarasikan tipenya terlebih dahulu sehingga parameter pada fungsi bisa digunakan untuk berbagai tipe obyek yang sesuai.
+Bentuk umum :
+def fungsi(argumen1, argumen2, ..., argumen n):
+ Statement1
+ ...
+ Statement n
+ return return variable
+Keterangan : 
+Fungsi diawali dengan kata kunci def, diikuti nama fungsi, boleh diikuti parameter formal yang ditulis dalam tanda kurung, dan deklarasi fungsi ditutup dengan tanda titik dua (:).
