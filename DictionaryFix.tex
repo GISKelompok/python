@@ -4,47 +4,74 @@ Dictionary merupakan tipe berupa kumpulan data seperti list dan tuple namun disa
 dictionary sangat aneh dan tidak ada. Setiap Elemen data dalam dictionary dibagi menjadi key dan value. Bagi para programmer yang terbiasa dengan penggunaan seleksi case, akan kebingungan saat mengenal 
 python karena tidak tersedia. Namun dengan adanya dictionary permasalahan tersebut dapat dipecahkan.
 
+Dictionary Python berbeda dengan List ataupun Tuple. Karena setiap urutanya berisi key dan value. Setiap key dipisahkan dari value-nya oleh titik dua (:), item dipisahkan oleh koma, dan semuanya tertutup dalam kurung kurawal. Dictionary kosong tanpa barang ditulis hanya dengan dua kurung kurawal, seperti ini: {}.
+
+Dictionary seperti buku alamat, dengan buku alamat anda bisa mencari alamat atau detail kontak hanya menggunakan nama orang yang anda cari. Kita mengasosiasikan key (nama) dengan value (detail). Catatan key harus bersifat unik, anda tidak bisa menemukan informasi yang tepat jika ada dua orang yang mempunyai nama yang sama dalam buku alamat anda.
+
+Anda hanya bisa menggunakan obyek immutable (seperti string) untuk key/ kunci dictionary. Anda bisa menggunakan obyek mutable atau immutable untuk value dalam dictionary.
+
+Dictionary dispesifikasikan menggunakan pasangan key dan value diapit menggunakan kurung kurawal, {key1: value1, key2: value2}.
+
 
 Dictionary mencakup setiap data akan memiliki pengenalnya masing – masing. Pengenal tersebut dinamakan dengan key dan datanya dinamakan dengan value.
 Dictionary diawali dengan tanda '{' dan diakhiri dengan tanda '}'. Khusus untuk key pada dictionary, nilainya harus berupa tipe data yang tidak dapat diganti seperti tuple, string dan number. Tapi umumnya key berisi number dan string. Karena jika Anda mencoba memasukkan tipe data yang mutable, akan keluar peringatan 'unhashable type' saat mendefinisikan dictionary yang key-nya
 berupa tipe data mutable.
 
+\subsection{Contoh Dictionary}
 
-Setiap kunci dipisahkan dari nilainya oleh titik dua (:), item dipisahkan oleh koma, dan semuanya tertutup dalam kurung kurawal. Kamus kosong tanpa barang ditulis hanya dengan dua kurung kurawal, seperti ini: 
+\begin{verbatim}
+data = {"nama":"ganjar","umur":30,"gender":"perempuan"}
+print data
+print data['nama']
+print data['umur']
+
+#via loop
+for key in data:
+    print key,"==>", data[key]
+\end{verbatim}
+
+
+\subsubsection{Membuat Dictionary}
+biodata1 = {'Nama': 'Wayan', 'Asal': 'Gianyar', 'Umur': 21, 'NoUrut': 1};
+biodata2 = {'Nama': 'Made', 'Asal': 'Denpasar', 'Umur': 23, 'NoUrut': 2};
+biodata3 = {'Nama': 'Nyoman', 'Asal': 'Gianyar', 'Umur': 21, 'NoUrut': 3};
+biodata4 = {'Nama': 'Wayan', 'Asal': 'Gianyar', 'Umur': 21, 'NoUrut': 1};
+ 
+\subsubsection{Membandingkan Dictionary}
+print "Hasil perbandingan biodata1 dan biodata2 : %d" % cmp (biodata1, biodata2)
+print "Hasil perbandingan biodata1 dan biodata3 : %d" % cmp (biodata1, biodata3)
+print "Hasil perbandingan biodata1 dan biodata4 : %d" % cmp (biodata1, biodata4)
+ 
+\subsubsection{Mendapatkan Jumlah Item  Dictionary}
+print "Panjang biodata1 : %d" % len (biodata1)
 
 Dictionary mencakup setiap data akan memiliki pengenalnya masing – masing. Pengenal tersebut dinamakan dengan key dan datanya dinamakan dengan value.
 Dictionary diawali dengan tanda '{' dan diakhiri dengan tanda '}'. Khusus untuk key pada dictionary, nilainya harus berupa tipe data yang tidak dapat diganti seperti tuple, string dan number. Tapi umumnya key berisi number dan string. Karena jika Anda mencoba memasukkan tipe data yang mutable, akan keluar peringatan 'unhashable type' saat mendefinisikan dictionary yang key-nya
 berupa tipe data mutable.
 
-Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa tipe apa pun, namun kunci harus berupa tipe data yang tidak berubah seperti string, angka, atau tupel. \par
+Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa tipe apa pun, namun kunci harus berupa tipe data yang tidak berubah seperti string, angka, atau tupel. 
 
-Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana - \par
-
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
+Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana 
 
 Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut 
 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
 
-Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana - \par
+Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana 
 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut
 
 Anda dapat menghapus elemen kamus individual atau menghapus keseluruhan isi kamus. Anda juga dapat menghapus seluruh kamus dalam satu operasi.
 
-Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana – \par
+Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana
 
 Ini menghasilkan hasil berikut. Perhatikan bahwa pengecualian diajukan karena setelah kamus del dict tidak ada lagi metode dibahas di bagian selanjutnya. \par
 
-Nilai kamus tidak memiliki batasan. Mereka bisa menjadi objek Python yang sewenang-wenang, baik objek standar atau objek yang ditentukan pengguna. Namun, hal yang sama tidak berlaku untuk kunci. \par
+Nilai kamus tidak memiliki batasan. Mereka bisa menjadi objek Python yang sewenang-wenang, baik objek standar atau objek yang ditentukan pengguna. Namun, hal yang sama tidak berlaku untuk kunci. 
  
 Ada dua hal penting yang perlu diingat tentang kunci kamus 
-Lebih dari satu entri per kunci tidak diperbolehkan. Yang berarti tidak ada kunci duplikat yang diperbolehkan. Ketika kunci duplikat ditemui selama penugasan, tugas terakhir akan menang. Sebagai contoh – \par
-Tombol harus tidak berubah. Yang berarti Anda bisa menggunakan string, angka atau tupel sebagai tombol kamus tapi sesuatu seperti ['key'] tidak diperbolehkan. Berikut adalah contoh sederhana: \par
-
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
-
-Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  $  \{  $ $  \}  $ dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan elemen yang tidak berubah) dan harus unik. \par
+Lebih dari satu entri per kunci tidak diperbolehkan. Yang berarti tidak ada kunci duplikat yang diperbolehkan. Ketika kunci duplikat ditemui selama penugasan, tugas terakhir akan menang. 
+Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  \$  \{  \$ \$  \}  \$ dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan elemen yang tidak berubah) dan harus unik.
 
 Seperti yang bisa Anda lihat di atas, kita juga bisa membuat kamus menggunakan fungsi built-in dict (). 
 
