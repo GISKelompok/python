@@ -1,32 +1,56 @@
 \section{Function}
 \subsection{Pengertian Function}
-Function/Fungsi adalah kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. 
+Function atau Fungsi adalah kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. 
 Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, 
 Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. 
 Fungsi ini disebut fungsi yang ditentukan pengguna.
 
 Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. 
 Fungsi (function) adalah yang bertugas untuk mencari akar dari suatu angka. Secara umum yang dimaksud dengan function adalah statemen
-yang dieksekusi. Seringkali input parameter diperlukan oleh function untuk dihitung, namun tidak selalu begitu. Contoh-contoh function yang lain adalah
->>> sin(pi/2)
-1.0
->>> tan(pi/4)
-0.99999999999999989
->>> exp(10)
-22026.465794806718
->>> log(100)
-4.6051701859880918
->>> log10(100)
-2.0
->>> pow(2,4)
-16.0
->>> asin(0.5)
-0.52359877559829893
->>> pi/6
-0.52359877559829882
- 
+yang dieksekusi. 
 
 
+Fungsi (Function) adalah suatu program terpisah dalam blok sendiri yang berfungsi sebagai sub-program (modul program) yang merupakan sebuah program kecil untuk memproses sebagian dari pekerjaan program utama.
+
+\subsection{Keuntungan Function}
+Keuntungan menggunakan fungsi :
+\begin{enumerate}
+\item
+Program besar dapat di pisah-pisah menjadi program-program kecil melalui function.
+\item
+Kemudahan dalam mencari kesalahan-kesalahan karena alur logika jelas dan kesalahan
+dapat dilokalisasi dalam suatu modul tertentu.
+\item
+Memperbaiki atau memodifikasi program dapat dilakukan pada suatu modul tertentu saja
+tanpa menggangu keseluruhan program.
+\item
+Dapat digunakan kembali (Reusability) oleh program atau fungsi lain.
+\item
+Meminimalkan penulisan perintah yang sama.
+\end{enumerate}
+
+\subsection{Kategori Function}
+Kategori Fungsi
+\begin{enumerate}
+\item
+Standard Library Function
+adalah fungsi-fungsi yang telah disediakan oleh Interpreter Python dalam file-file atau librarynya.
+ Misalnya: raw_input(), input(), print(), open(), len(), max(), min(), abs() dll.
+\item
+Programme-Defined Function
+Adalah function yang dibuat oleh programmer sendiri. Function ini memiliki nama tertentu yang
+unik dalam program, letaknya terpisah dari program utama, dan bisa dijadikan satu ke dalam suatu
+library buatan programmer itu sendiri.
+\end{enumerate}
+
+\subsection{Perintah pada Function}
+Dalam python terdapat dua perintah yang dapat digunakan untuk membuat sebuah fungsi,
+yaitu def dan lambda. def adalah perintah standar dalam python untuk mendefinisikan sebuah
+fungsi. Tidak seperti function dalam bahasa pemrograman compiler seperti C/C++, def dalam
+python merupakan perintah yang executable, artinya function tidak akan aktif sampai python merunning
+perintah def tersebut. Sedangkan lambda, dalam python lebih dikenal dengan nama
+Anonymous Function (Fungsi yang tidak disebutkan namanya). Lambda bukanlah sebuah perintah
+(statemen) namun lebih kepada ekspresi (expression).
 
 Blok fungsi dimulai dengan defensi kata kunci diikuti oleh nama fungsi dan tanda kurung (()). 
 Setiap parameter masukan atau argumen harus ditempatkan di dalam tanda kurung ini. Anda juga dapat menentukan parameter di dalam tanda kurung ini. 
@@ -42,27 +66,61 @@ Mendefinisikan sebuah fungsi hanya memberinya sebuah nama, menentukan parameter 
 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
 
-Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. Sebagai contoh - \par
+Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. 
 
-Di sini, kita mempertahankan referensi objek yang dilewati dan menambahkan nilai pada objek yang sama. Jadi, ini akan menghasilkan hasil sebagai berikut 
-
-Ada satu contoh lagi di mana argumen dilewatkan melalui referensi dan rujukannya ditimpa di dalam fungsi yang disebut. 
-
-Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut:
-
+\subsection{Cara Memanggil Function}
 Anda dapat memanggil fungsi dengan menggunakan jenis argumen formal berikut: 
+\begin{itemize}
+\item
 Argumen yang dibutuhkan 
+\item
 Argumen kata kunci 
+\item
 Argumen baku 
+\item
 Argumen panjang variable 
+\end{itemize}
+
+\subsection{Contoh Fungsi}
+\begin{verbatim}
+\# lat15.py
+
+def halo_dunia():
+    print 'Halo Dunia!'
+halo_dunia()  \# memanggil fungsi halo_dunia
+halo_dunia()  \# fungsi halo_dunia dipanggil lagi
+\end{verbatim}
+
+\subsection{Contoh Parameter Fungsi}
+\begin{verbatim}
+def halo(nama):
+    print 'Halo \%s!' \% nama
+
+def cetak_maksimal(a, b):
+    if a > b:
+        print '\%s merupakan nilai maksimal' \% a
+    elif a == b:
+        print '\%s sama dengan \%s' \% (a, b)
+    else:
+        print '\%s merupakan nilai maksimal' \% b
+
+halo('Dunia')  \# memanggil fungsi halo dengan argumen 'Dunia'
+halo('Indonesia')  \# memanggil fungsi halo dengan argumen 'Indonesia'
+
+cetak_maksimal(10, 100)
+
+x = 9
+y = 3
+
+cetak_maksimal(x, y)
+
+\end{verbatim}
+
+
 
 Argumen yang diperlukan adalah argumen yang diberikan ke sebuah fungsi dalam urutan posisi yang benar. Di sini, jumlah argumen dalam pemanggilan fungsi harus sesuai persis dengan definisi fungsi. Untuk memanggil fungsi printme (), Anda pasti perlu melewati satu argumen, jika tidak maka akan memberikan kesalahan sintaks sebagai berikut 
 
 Argumen kata kunci terkait dengan pemanggilan fungsi. Bila Anda menggunakan argumen kata kunci dalam pemanggilan fungsi, penelepon mengidentifikasi argumen berdasarkan nama parameter. Hal ini memungkinkan Anda melewatkan argumen atau menempatkannya agar tidak bermasalah karena penerjemah Python dapat menggunakan kata kunci yang diberikan agar sesuai dengan nilai parameter. Anda juga dapat membuat panggilan kata kunci ke fungsi printme () dengan cara berikut 
-
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
-
-Contoh berikut memberikan gambaran yang lebih jelas. Perhatikan bahwa urutan parameter tidak masalah. 
 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
 
@@ -73,7 +131,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut
 Anda mungkin perlu memproses sebuah fungsi untuk argumen lebih banyak daripada yang Anda tentukan saat menentukan fungsinya. Argumen ini disebut variable-lengtharguments dan tidak disebutkan dalam definisi fungsi, tidak seperti argumen yang dibutuhkan dan standar. 
 Sintaks untuk fungsi dengan argumen variabel non-kata kunci adalah ini 
 
-Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana - \par
+Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana
 
 Fungsi ini disebut anonim karena tidak dinyatakan secara standar dengan menggunakan kata kunci def. Anda bisa menggunakan kata kunci lambda untuk membuat fungsi anonim yang kecil. \par
 
@@ -82,11 +140,7 @@ Fungsi anonim tidak bisa menjadi panggilan langsung untuk dicetak karena lambda 
 Meskipun tampak bahwa lambda adalah versi satu baris dari sebuah fungsi, mereka tidak setara dengan pernyataan inline di C atau C ++, yang tujuannya adalah dengan  melewatkan alokasi stack fungsi selama pemanggilan untuk alasan kinerja. 
 Sintaks fungsi lambda hanya berisi satu pernyataan, yaitu sebagai berikut 
 
-Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja 
-
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
-
-Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. \par
+Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. 
 
 Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan nilai dari sebuah fungsi sebagai berikut
 
@@ -96,7 +150,7 @@ Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengaks
 
 Variabel yang didefinisikan di dalam badan fungsi memiliki lingkup lokal, dan yang didefinisikan di luar memiliki cakupan global. 
 
-Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana - \par
+Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana 
 
 Dalam   menulis   program, tentunya   kita   akan menggunakan kode program secara efesien, source code yang pernah kita tulis sebelumnya, pastilah akan kita  
 gunakan  kembali,  dengan  beberapa  nilai  yang  berbeda. 
