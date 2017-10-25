@@ -291,6 +291,58 @@ print(my $  \_  $tuple) \par
  $  \#  $ Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z') \par
 my $  \_  $tuple = ('p','r','o','g','r','a','m','i','z') \par
 print(my $  \_  $tuple) \par
+\section {tuples}
+\subsection {contoh tuples}
+Tuple juga merupakan tipe data urutan (sequence data type) yang secara fungsi sama dengan List. Namun Tuple berbeda sifatnya, yaitu Tuple bersifat immutable yang mana data di dalam Tuple tidak dapat kita ubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisahkan oleh tanda koma (‘,’). Tidak seperti List, tipe data Tuple ditandai dengan tanda kurung "()". Berikut contohnya,
+\begin{verbatim}
+>>> NamaSiswa = ("Kartika", "Annisa", "Zahrotul", "Zelma", "Noval")
+>>> NamaSiswa
+('Kartika', 'Annisa', 'Zahrotul', 'Zelma', 'Noval')
+\end{verbatim}
+
+Anda dapat mengisi sebuah Tuple tanpa menggunakan tanda kurung, namun hal ini tidak dianjurkan jika Tuple tersebut berisi data yang besar. Contoh di bawah ini akan menunjukkan jika kita ingin membuat Tuple bersarang, ada Tuple di dalam Tuple.
+\begin{verbatim}
+>>> NamaKota = "Surabaya", "Jakarta"
+>>> NamaKota
+('Surabaya', 'Jakarta')
+>>> KotaBesar = NamaKota, ("Bandung", "Yogyakarta", "Medan")
+>>> KotaBesar
+(('Surabaya', 'Jakarta'), ('Bandung', 'Yogyakarta', 'Medan'))
+\end{verbatim}
+
+Telah kita bahas di awal tadi, bahwa perbedaan utama dari Tuple dengan List adalah Tuple bersifat immutable, kita tidak diijinkan untuk mengganti nilai yang ada atau menghapus data yang ada dalam Tuple tersebut. Jika kita mengubah atau menghapus data yang sudah ada sebelumnya, maka pesan kesalahan akan di tampilkan oleh interpreter Python.
+\begin{verbatim}
+>>> NamaKota[1] = "Makasar"
+Traceback (most recent call last):
+File "", line 1, in
+NamaKota[1] = "Makasar"
+TypeError: 'tuple' object does not support item assignment
+\end{verbatim}
+
+Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dalam Tuple. Berikut contohnya,
+\begin{verbatim}
+>>> NamaSiswa[1]
+'Annisa'
+>>> NamaSiswa[0:2]
+('Kartika', 'Annisa')
+>>> KotaBesar[:2]
+(('Surabaya', 'Jakarta'), ('Bandung', 'Yogyakarta', 'Medan'))
+>>> KotaBesar[1][0]
+'Bandung'
+\end{verbatim}
+
+Untuk mengatasi masalah ke-immutable-an (immutability) pada Tuple, kita dapat membuat Tuple baru yang merupakan gabungan dari Tuple yang sudah ada. Berikut contohnya,
+\begin{verbatim}
+>>> Tuple1 = ("a", 1, 2, 3)
+>>> Tuple1
+('a', 1, 2, 3)
+>>> Tuple2 = ("b", 4, 5, 6)
+>>> Tuple2
+('b', 4, 5, 6)
+>>> TupleGab = Tuple1 + Tuple2
+>>> TupleGab
+('a', 1, 2, 3, 'b', 4, 5, 6)
+\end{verbatim}
 \vspace{12pt}
  \hspace*{0.5in} \vspace{12pt}
 Python Tuples \par
