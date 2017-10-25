@@ -345,6 +345,47 @@ Untuk mengatasi masalah ke-immutable-an (immutability) pada Tuple, kita dapat me
 \end{verbatim}
 \vspace{12pt}
  \hspace*{0.5in} \vspace{12pt}
+ Pada contoh di atas, dua buah Tuple dibuat secara terpisah, Tuple1 dan Tuple2. Dua Tuple ini dioperasikan pada Tuple lainnya, TupleGab, dengan menggunakan operator +. Perlu dicatat bahwa TupleGab berisi nilai-nilai dari Tuple1 dan Tuple2. Metode seperti ini dapat juga digunakan untuk menambahkan beberapa elemen data lain pada sebuah Tuple.
+\begin{verbatim}
+>>> IniTuple = ("p", "q", "r")
+>>> IniTuple = IniTuple + ("s", "t")
+>>> IniTuple
+('p', 'q', 'r', 's', 't')
+\end{verbatim}
+
+Kita juga dapat membuat Tuple dengan obyek-obyek yang mutable, sepeti List. Sedemikian sehingga, kita dapat mengubah nilai yang ada dalam List tersebut. Berikut contohnya,
+\begin{verbatim}
+>>> TupleData = (222, "ayam", [555, "telur", "sapi"])
+>>> TupleData
+(222, 'ayam', [555, 'telur', 'sapi'])
+>>> TupleData[2][1] = 777
+>>> TupleData
+(222, 'ayam', [555, 777, 'sapi'])
+\end{verbatim}
+Pada contoh di atas, pertama kita buat dulu sebuah Tuple yang berisi sebuah List. Kemudian, kita ubah sebuah nilai yang terdapat dalam List tersebut. Dapat kita simpulkan bahwa obyek mutable dalam Tuple dapat kita ubah, meskipun Tuple sendiri bersifat immutable.
+
+Jika kita ingin membuat sebuah sebuah variable dengan Tuple kosong, kita cukup memberikan tanda kurung pada variabel tersebut. Panjang Tuple kosong tersebut adalah 0. Berikut contohnya,
+\begin{verbatim}
+>>> TupleKosong = ()
+>>> TupleKosong
+()
+>>> len(TupleKosong)
+0
+\end{verbatim}
+Jika kita membuat sebuah Tuple yang berisi satu data, maka harus kita tambahkan sebuah tanda koma. Jika tanpa tanda koma, tipe data tersebut akan dianggap sebagai tipe variabel dari sebuah Tuple. Berikut contohnya,
+\begin{verbatim}
+>>> SatuData = ("Kymco")
+>>> len(SatuData)
+5
+\end{verbatim}
+Dari contoh di atas, karena kita hanya memberikan satu data pada variabel SatuData, seharusnya panjang Tuple SatuData adalah 1. Mengapa terjadi seperti ini? Karena tanda koma tidak kita berikan pada Tuple SatuData tersebut, sehingga variable SatuData dianggap bertipe String. Berikut contoh jika kita memberikan tanda koma,
+\begin{verbatim}
+>>> TupleSatu = ("Kymco",)
+>>> TupleSatu
+('Kymco',)
+>>> len(TupleSatu)
+1
+\end{verbatim}
 Python Tuples \par
 Tutorial Tupai Python menjelaskan tupel dan bagaimana menggunakannya dengan Python. \par
 Dengan Python, tupel hampir sama dengan daftar. Jadi, mengapa kita harus menggunakannya? Satu perbedaan utama antara tupel dan daftar adalah bahwa tupel tidak dapat diubah. Artinya, Anda tidak dapat menambahkan, mengubah, atau menghapus elemen dari tuple. Tupel mungkin tampak aneh pada awalnya, tapi ada alasan bagus mengapa mereka tidak bisa berubah. Sebagai pemrogram, kita mengacaukan sesekali. Kami mengubah variabel yang tidak ingin kami ubah, dan terkadang, kami hanya ingin hal-hal menjadi konstan sehingga kami tidak sengaja mengubahnya nanti. Namun, jika kita mengubah pikiran kita, kita juga bisa mengubah tupel menjadi daftar atau daftar menjadi tupel. Faktanya adalah kita perlu membuat usaha sadar untuk mengatakan Python, saya ingin mengubah tupel ini menjadi sebuah daftar sehingga saya bisa memodifikasinya. Cukup mengoceh, mari kita lihat sebuah tuple beraksi! \par
