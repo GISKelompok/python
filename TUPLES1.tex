@@ -290,17 +290,17 @@ print(my $  \_  $tuple) \par
  $  \#  $ tuples can be reassigned \par
  $  \#  $ Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z') \par
 my $  \_  $tuple = ('p','r','o','g','r','a','m','i','z') \par
-print(my $  \_  $tuple) \par
+print(my $  \_  $tuple) \par
 \section {Tuple pada Bahasa python}
 
-Tuples sebenarnya sama seperti list. Namun perbedaannya hanya pada pembuatannya. Bila list menggunakan kurung siku buka dan tutup “[]” untuk mengawali dan mengakhirinya, maka pada tuples, menggunakan kurung buka dan tutup biasa “()” untuk mengawali dan mengakhiri elemennya. Dan setiap elemennya dipisahkan oleh tanda koma. Sama seperti list. Kemudian, perbedaan yang satunya lagi, Tuples ini bersifat immutable yang artinya, ketika sudah di deklarasikan, tuples tidak akan bisa kita edit lagi isiinya. Sehingga isinya akan tetap sama. Untuk lebih memahami menganai tuples ini, silahkan coba ketikkan script di bawah ini pada command line atau IDLE python kalian..
+Tuples adalah sama seperti list. Tetapi perbedaannya yaitu pada pembuatannya. Bila list memakai kurung siku buka dan tutup “[]” untuk mengawali dan diakhirnya, maka pada tuples, digunakan kurung buka dan tutup biasa “()" untuk diawali dan diakhirinya elemennya. Dan setiap elemennya dipisah oleh tanda koma. Sama dengan list. Setelah itu, perbedaanya yang satunya lagi, Tuples ini bersifat immutable yang berarti, ketika sudah di deklarasikan, tuples tidak akan bisa di edit lagi pada isinya. Sehingga pada isinya akan tetap sama. Untuk lebih pahamnya menganai tuples ini, silahkan coba ketikkan script di bawah ini pada command line atau IDLE python kalian..
 >>>myTuple=(2,True,4.96) 
 >>>myTuple 
 >>>len(myTuple) 
 >>>myTuple[0] 
 >>>myTuple*3
  >>>myTuple[0:2]
-Tuple mirip dengan list namun tuple bersifat immutable (tidak bisa diubah setelah didefinisikan).
+Tuple hampir mirip dengan list namun pada tuple bersifat immutable (tidak bisa diubah setelah didefinisikan).
 Tuple dibuat dengan menspesifikasikan item tuple dipisahkan menggunakan tanda koma dan opsional diapit dengan tanda kurung.
 \# lat26.py
 
@@ -315,28 +315,28 @@ print 'binatang terakhir dari kebun binatang lama:', kebun_binatang_baru[2][2]
 
 jumlah_binatang = len(kebun_binatang_baru) - 1 + len(kebun_binatang_baru[2])
 
-print 'jumlah binatang yang ada di kebun binatang baru :', jumlah_binatang
+pada print 'jumlah binatang yang ada di kebun binatang baru :', jumlah_binatang
 \subsection {Deklarasi Tuples}
 
 
-Untuk membuat sebuah tuples, setiap elemen dipisahkan dengan tanda koma "comma separated values". Berikut contoh program deklarasi sebuah tuples.
+Untuk membuat sesuatu pada tuples, setiap elemen harus dipisahkan dengan tanda koma "comma separated values". ini adalah contoh sebuah program deklarasi pada tuples.
 
 tup1 = (Nursalim', 'Naura Krasiva', 1983, 2000);
 tup2 = (1, 2, 3, 4, 5 );
 tup3 = "a", "b", "c", "d";
 
-Sedangkan untuk membuat sebuah tuple kosong, Anda dapat mendeklarasikannya dalam bentuk berikut ini:
+Sedangkan untuk membuat sebuah tuple kosong, Kita dapat mendeklarasikannya dengan bentuk berikut ini:
 
 tup1 = ();
 
-Setiap elemen pada tuples, dimulai dengan indeks ke-0.
+pada Setiap elemen tuples, diawali dengan indeks ke-0.
 
 Mengakses Tuples
 
 
-Untuk mengakses sebuah atau beberapa elemen pada tuples, Anda dapat menggunakan tanda kurung siku "square bracket" diikuti dengan index yang akan Anda akses.
+Untuk mengakses sesuatu atau beberapa elemen pada tuples, Anda bisa menggunakan tanda kurung siku "square bracket" diikuti oleh index yang akan kita akses.
 
-Perhatikan contoh program berikut ini:
+Lihat contoh program berikut ini:
 
 #Nama File : tuples_access.py
 
@@ -346,38 +346,38 @@ tup2 = (1, 2, 3, 4, 5, 6, 7 );
 print ("tup1[1]: ", tup1[1])
 print ("tup2[1:6]: ", tup2[1:6])
 
-Jika program diatas Anda jalankan, maka akan menghasilkan output sebagai berikut:
+Pada program yang Kita jalankan, maka akan mendapatkan output sebagai berikut:
 
 tup1[1]:  Naura Krasiva
 tup2[1:6]:  (2, 3, 4, 5, 6)
 
 
 \subsection {Menggabungkan Beberapa Tuples}
-Karena bersifat immutable, atau tidak dapat di update nilanya. Anda hanya dapat menggabungkan dua tuple atau lebih untuk meng-update nilai sebuah tuples.
+Karena sifatnya immutable, atau tidak dapat di update nilanya. Kita hanya dapat menyatukan dua tuple atau lebih untuk meng-update nilai pada tuple.
 
-Untuk menggabungkan dua buah tuples atau lebih, Anda dapat menggunakan operator concatenation "+".
+Untuk menggabungkan dua buah tuples atau selebihnya, Kita dapat memakai operator concatenation "+".
 
-Perhatikan contoh program berikut ini:
+lihat contoh pada program berikut ini:
 
 #Nama File : tuples_concat.py
 
 tup1 = (1983, 2012);
 tup2 = ('Nursalim', 'Naura Krasiva');
 
-# Buat variable tuples baru untuk menampung hasil penggabungan
+# Buatlah variable tuples baru untuk mengumpulkan hasil penggabungan
 tup3 = tup1 + tup2;
 print (tup3)
 
-Jika Anda jalankan program diatas, maka akan menghasilkan output sebagai berikut:
+Jika Kita menjalankan program diatas, maka akan mendapatkan hasil sebagai berikut:
 
 (1983, 2012, 'Nursalim', 'Naura Krasiva')
 
 Menghapus Elemen Tuples
 
 
-Pada tuples, Anda tidak diperbolehkan untuk menghapus sebagian elemen atau beberapa elemen saja. Anda harus menghapus semuanya.
+Pada tuples, Kita tidak diperbolehkan untuk menghapus pada beberapa elemen saja. Kita harus menghapus semuanya.
 
-Perhatikan contoh program berikut ini:
+Perhatikan pada contoh program berikut di bawah ini:
 
 #Nama File : tuples_delete.py
 
@@ -389,7 +389,7 @@ print ("Setelah tuples di delete : ")
 print (tup)
 
 
-Jika program diatas Anda jalankan, maka akan menghasilkan output sebagai berikut: 
+Jika program pada diatas Kita jalankan, maka akan mendapatkan output sebagai berikut: 
 
 ('Nursalim', 'Naura Krasiva', 1983, 2012)
 Setelah tuples di delete : 
@@ -401,14 +401,14 @@ NameError: name 'tup' is not defined
 Operasi Dasar Pada Tuples
 
 
-Ada beberapa operasi dasar pada tuples yang sering kita gunakan, yaitu
-penggabungan (concatenation)
-repetisi (repetition)
+Ada beberapa operasi awal pada tuples yang sering kita pakai, yaitu
+penggabungan - (concatenation)
+repetisi - (repetition)
 membership
-iterasi (iteration)
-Contoh Program
+iterasi - (iteration)
+Contoh pada Program
 
-Berikut contoh penggunaan operasi dasar diatas pada program:
+Berikut adalah contoh penggunaan operasi awal diatas pada program:
 
 \# Nama File : tuples_operator.py
 \begin{verbatim}
@@ -429,14 +429,14 @@ True
 2
 3
 \subsection {contoh tuples}
-Tuple juga merupakan tipe data urutan (sequence data type) yang secara fungsi sama dengan List. Namun Tuple berbeda sifatnya, yaitu Tuple bersifat immutable yang mana data di dalam Tuple tidak dapat kita ubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisahkan oleh tanda koma (‘,’). Tidak seperti List, tipe data Tuple ditandai dengan tanda kurung "()". Berikut contohnya,
+Tuple juga merupakan tipe data berurutan (sequence data type) yang secara fungsi sama seperti List. Namun Tuple berbeda sifatnya, yaitu Tuple mempunyai sifat immutable yang mana data di dalam Tuple tidak dapat diubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisah oleh tanda koma (‘,’). Tidak sama seperti List, tipe data Tuple ditandai  tanda kurung "()". Berikut contohnya,
 \begin{verbatim}
 >>> NamaSiswa = ("Kartika", "Annisa", "Zahrotul", "Zelma", "Noval")
 >>> NamaSiswa
 ('Kartika', 'Annisa', 'Zahrotul', 'Zelma', 'Noval')
 \end{verbatim}
 
-Anda dapat mengisi sebuah Tuple tanpa menggunakan tanda kurung, namun hal ini tidak dianjurkan jika Tuple tersebut berisi data yang besar. Contoh di bawah ini akan menunjukkan jika kita ingin membuat Tuple bersarang, ada Tuple di dalam Tuple.
+Kita dapat mengisi sebuah Tuple tanpa menggunakan tanda kurung, namun hal ini tidak dianjurkan jika Tuple tersebut berisi data yang besar. Contoh di bawah ini akan memperlihatkan jika kita ingin membuat Tuple bersarang, ada Tuple di dalam Tuple.
 \begin{verbatim}
 >>> NamaKota = "Surabaya", "Jakarta"
 >>> NamaKota
@@ -446,7 +446,7 @@ Anda dapat mengisi sebuah Tuple tanpa menggunakan tanda kurung, namun hal ini ti
 (('Surabaya', 'Jakarta'), ('Bandung', 'Yogyakarta', 'Medan'))
 \end{verbatim}
 
-Telah kita bahas di awal tadi, bahwa perbedaan utama dari Tuple dengan List adalah Tuple bersifat immutable, kita tidak diijinkan untuk mengganti nilai yang ada atau menghapus data yang ada dalam Tuple tersebut. Jika kita mengubah atau menghapus data yang sudah ada sebelumnya, maka pesan kesalahan akan di tampilkan oleh interpreter Python.
+Telah kita bahas pada awal tadi, bahwa perbedaan utama pada Tuple dengan List yaitu Tuple bersifat immutable, kita tidak diijinkan untuk menggantikan nilai yang ada atau menghapus data yang ada dalam Tuple tersebut. Jika kita menghapus atau mengubah data yang sudah ada sebelumnya, maka pesan kesalahan akan menampilkan oleh interpreter Python.
 \begin{verbatim}
 >>> NamaKota[1] = "Makasar"
 Traceback (most recent call last):
@@ -467,7 +467,7 @@ Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dala
 'Bandung'
 \end{verbatim}
 
-Untuk mengatasi masalah ke-immutable-an (immutability) pada Tuple, kita dapat membuat Tuple baru yang merupakan gabungan dari Tuple yang sudah ada. Berikut contohnya,
+Untuk mengatasi permasalahan ke-immutable-an (immutability) pada Tuple, kita bisa membuat Tuple yang baru yang merupakan gabungan pada Tuple yang sudah ada. Berikut contohnya,
 \begin{verbatim}
 >>> Tuple1 = ("a", 1, 2, 3)
 >>> Tuple1
@@ -480,7 +480,7 @@ Untuk mengatasi masalah ke-immutable-an (immutability) pada Tuple, kita dapat me
 ('a', 1, 2, 3, 'b', 4, 5, 6)
 \end{verbatim}
 
-Pada contoh di atas, dua buah Tuple dibuat secara terpisah, Tuple1 dan Tuple2. Dua Tuple ini dioperasikan pada Tuple lainnya, TupleGab, dengan menggunakan operator +. Perlu dicatat bahwa TupleGab berisi nilai-nilai dari Tuple1 dan Tuple2. Metode seperti ini dapat juga digunakan untuk menambahkan beberapa elemen data lain pada sebuah Tuple.
+Pada contoh di atas, dua buah Tuple dibuat secara terpisah, Tuple1 dan Tuple2. Dua Tuple ini dioperasikan pada Tuple yang lain, TupleGab, dengan menggunakan operator +. Perlu dicatat bahwa TupleGab berisi nilai-nilai dari Tuple2 dan Tuple1. Metode seperti ini bisa juga dipakai untuk menambahkan beberapa elemen data lain pada sebuah Tuple.
 \begin{verbatim}
 >>> IniTuple = ("p", "q", "r")
 >>> IniTuple = IniTuple + ("s", "t")
@@ -488,7 +488,7 @@ Pada contoh di atas, dua buah Tuple dibuat secara terpisah, Tuple1 dan Tuple2. D
 ('p', 'q', 'r', 's', 't')
 \end{verbatim}
 
-Kita juga dapat membuat Tuple dengan obyek-obyek yang mutable, sepeti List. Sedemikian sehingga, kita dapat mengubah nilai yang ada dalam List tersebut. Berikut contohnya,
+Kita juga dapat membuat Tuple oleh obyek-obyek yang mutable, sepeti List. Demikiannya sehingga, kita dapat mengganti nilai yang ada didalam List tersebut. Berikut adalah contohnya,
 \begin{verbatim}
 >>> TupleData = (222, "ayam", [555, "telur", "sapi"])
 >>> TupleData
@@ -497,9 +497,9 @@ Kita juga dapat membuat Tuple dengan obyek-obyek yang mutable, sepeti List. Sede
 >>> TupleData
 (222, 'ayam', [555, 777, 'sapi'])
 \end{verbatim}
-Pada contoh di atas, pertama kita buat dulu sebuah Tuple yang berisi sebuah List. Kemudian, kita ubah sebuah nilai yang terdapat dalam List tersebut. Dapat kita simpulkan bahwa obyek mutable dalam Tuple dapat kita ubah, meskipun Tuple sendiri bersifat immutable.
+Contoh di atas adalah, pertama kita buat dulu sebuah Tuple yang berisi sebuah List. Kemudian, kita mengubah sebuah nilai yang terdapat didalam List tersebut. Dapat kita simpulkan bahwa objek mutable dalam Tuple bisa kita ubah, meskipun Tuple sendiri sifatnya immutable.
 
-Jika kita ingin membuat sebuah sebuah variable dengan Tuple kosong, kita cukup memberikan tanda kurung pada variabel tersebut. Panjang Tuple kosong tersebut adalah 0. Berikut contohnya,
+Jika kita akan membuat sebuah sebuah variable oleh Tuple kosong, kita cukup memberi tanda kurung pada variabel tersebut. Panjang Tuple kosong tersebut adalah 0. Berikut contohnya,
 \begin{verbatim}
 >>> TupleKosong = ()
 >>> TupleKosong
@@ -507,13 +507,13 @@ Jika kita ingin membuat sebuah sebuah variable dengan Tuple kosong, kita cukup m
 >>> len(TupleKosong)
 0
 \end{verbatim}
-Jika kita membuat sebuah Tuple yang berisi satu data, maka harus kita tambahkan sebuah tanda koma. Jika tanpa tanda koma, tipe data tersebut akan dianggap sebagai tipe variabel dari sebuah Tuple. Berikut contohnya,
+Jika kita menciptakan sebuah Tuple yang isinya satu data, maka harus kita tambahkan sebuah tanda koma. Jika tidak ada tanda koma, tipe data tersebut akan dianggap sebagai tipe variabel dari sebuah Tuple. Berikut contohnya,
 \begin{verbatim}
 >>> SatuData = ("Kymco")
 >>> len(SatuData)
 5
 \end{verbatim}
-Dari contoh di atas, karena kita hanya memberikan satu data pada variabel SatuData, seharusnya panjang Tuple SatuData adalah 1. Mengapa terjadi seperti ini? Karena tanda koma tidak kita berikan pada Tuple SatuData tersebut, sehingga variable SatuData dianggap bertipe String. Berikut contoh jika kita memberikan tanda koma,
+Pada contoh di atas, karena kita hanya memberi satu data pada variabel SatuData, seharusnya panjang Tuple SatuData yaitu 1. Kenapa terjadi seperti ini? Olehkarena itu tanda koma tidak kita berikan pada Tuple SatuData tersebut, sehingga variable SatuData dianggap bertipe String. Berikut contoh jika kita memberikan tanda koma,
 \begin{verbatim}
 >>> TupleSatu = ("Kymco",)
 >>> TupleSatu
@@ -522,18 +522,18 @@ Dari contoh di atas, karena kita hanya memberikan satu data pada variabel SatuDa
 1
 \end{verbatim}
 
-Berikut ini adalah daftar fungsi tuples bawaan yang terdapat pada Python:
-len(tuple), digunakan untuk menghitung panjang sebuah tuples
-max(tuple), digunakan untuk menghitung nilai maksimum dari elemen yang ada di tuples
-min(tuple), digunakan untuk menghitung nilai minimum dari elemen yang ada di tuples
-tuple(seq), digunakan untuk mengubah atau mengkonversi dari list menjadi tuples.
+Berikut yaitu daftar fungsi tuples bawaanya yang terdapat oleh Python:
+len(tuple), dipakai untuk menghitung panjang sebuah tuples
+max(tuple), dipakai untuk menghitung nilai maksimum dari elemen yang ada di tuples
+min(tuple), dipakai untuk menghitung nilai minimum dari elemen yang ada di tuples
+tuple(seq), dipakai untuk mengubah atau mengkonversi dari list menjadi tuples.
 
 \subsection len(tuple)
 
 
-Fungsi len(tuple) digunakan untuk menghitung panjang sebuah tuples.
+Fungsi len(tuple) dipakai untuk menghitung panjang sebuah tuples.
 
-Contoh Program
+Contoh pada Program
 
 \# Nama File : tuples_length.py
 
@@ -542,7 +542,7 @@ tuple1, tuple2 = (123, 'xyz', 'zara'), (456, 'abc')
 print ("Panjang tuple1 : ", len(tuple1))
 print ("Panjang tuple2 : ", len(tuple2))
 
-Jika program diatas Anda jalankan, maka akan menampilkan output sebagai berikut:
+Jika program diatas Kita jalankan, maka akan memperlihatkan output sebagai berikut:
 
 Panjang tuple1 :  3
 Panjang tuple2 :  2
@@ -551,9 +551,9 @@ Panjang tuple2 :  2
 \subsection max(tuple)
 
 
-Fungsi max(tuple) digunakan untuk menampilkan nilai maksimum dari elemen yang ada di dalam tuples.
+Fungsi max(tuple) dipakai untuk memperlihatkan nilai maksimum pada elemen yang ada dalam tuples.
 
-Contoh Program
+Contoh pada Program
 
 \# Nama File : tuples_max.py
 
@@ -563,7 +563,7 @@ print ("Max value tuple1 : ", max(tuple1))
 print ("Max value tuple2 : ", max(tuple2))
 
 
-Jika program diatas Anda jalankan, maka akan menampilkan output sebagai berikut:
+Jika program yang ada diatas Kita jalankan, maka akan memperlihatkan output di bawah ini:
 
 Max value tuple1 :  zara
 Max value tuple2 :  300
@@ -572,7 +572,7 @@ Max value tuple2 :  300
 min(tuple)
 
 
-Fungsi min(tuple) digunakan untuk menampilkan nilai minimum dari elemen yang ada di dalam tuples.
+Fungsi pada min(tuple) dipakai untuk memperlihatkan nilai minimum pada elemen yang ada di dalam tuples.
 
 Contoh Program
 
@@ -583,7 +583,7 @@ tuple1, tuple2 = ("dodol", 'xyz', 'zara', 'abc'), (100, -200, 300)
 print ("Min value tuple1 : ", min(tuple1))
 print ("Min value tuple2 : ", min(tuple2))
 
-Jika program diatas Anda jalankan, maka akan menampilkan output sebagai berikut:
+Jika program yang ada diatas Kita jalankan, maka akan memperlihatkan output sebagai berikut:
 
 Min value tuple1 :  abc
 Min value tuple2 :  -200
@@ -592,7 +592,7 @@ Min value tuple2 :  -200
 \subsection tuple(seq)
 
 
-Fungsi tuple(seq) digunakan untuk mengubah atau mengkonversi sebuah list menjadi tuples.
+Fungsi pada tuple(seq) dipakai untuk mengganti atau mengkonversi pada list menjadi tuples.
 
 Contoh Program
 
@@ -604,9 +604,11 @@ aTuple = tuple(aList)
 print ("Tuple elements : ", aTuple)
 
 
-Jika program diatas Anda jalankan, maka akan menampilkan output sebagai berikut:
+Jika pada program diatas Kita jalankan, maka akan memperlihatkan output sebagai berikut:
 
 Tuple elements :  (123, 'xyz', 'zara', 'abc')
+
+
 
 
 \vspace{12pt}
