@@ -303,7 +303,7 @@ Tuples adalah sama seperti list. Tetapi perbedaannya yaitu pada pembuatannya. Bi
 Tuple hampir mirip dengan list namun pada tuple bersifat immutable (tidak bisa diubah setelah didefinisikan).
 Tuple dibuat dengan menspesifikasikan item tuple dipisahkan menggunakan tanda koma dan opsional diapit dengan tanda kurung.
 \# lat26.py
-
+\begin{verbatim}
 kebun_binatang = ('ular python', 'gajah', 'pinguin')
 print 'jumlah binatang yang ada di kebun binatang :', len(kebun_binatang)
 
@@ -316,6 +316,7 @@ print 'binatang terakhir dari kebun binatang lama:', kebun_binatang_baru[2][2]
 jumlah_binatang = len(kebun_binatang_baru) - 1 + len(kebun_binatang_baru[2])
 
 pada print 'jumlah binatang yang ada di kebun binatang baru :', jumlah_binatang
+\end{verbatim}
 \subsection {Deklarasi Tuples}
 
 
@@ -337,8 +338,8 @@ Mengakses Tuples
 Untuk mengakses sesuatu atau beberapa elemen pada tuples, Anda bisa menggunakan tanda kurung siku "square bracket" diikuti oleh index yang akan kita akses.
 
 Lihat contoh program berikut ini:
-
-#Nama File : tuples_access.py
+\begin{verbatim}
+\# Nama File : tuples_access.py
 
 tup1 = ('Nursalim', 'Naura Krasiva', 1983, 2012);
 tup2 = (1, 2, 3, 4, 5, 6, 7 );
@@ -350,7 +351,7 @@ Pada program yang Kita jalankan, maka akan mendapatkan output sebagai berikut:
 
 tup1[1]:  Naura Krasiva
 tup2[1:6]:  (2, 3, 4, 5, 6)
-
+\end{verbatim}
 
 \subsection {Menggabungkan Beberapa Tuples}
 Karena sifatnya immutable, atau tidak dapat di update nilanya. Kita hanya dapat menyatukan dua tuple atau lebih untuk meng-update nilai pada tuple.
@@ -358,16 +359,16 @@ Karena sifatnya immutable, atau tidak dapat di update nilanya. Kita hanya dapat 
 Untuk menggabungkan dua buah tuples atau selebihnya, Kita dapat memakai operator concatenation "+".
 
 lihat contoh pada program berikut ini:
-
+\begin{verbatim}
 #Nama File : tuples_concat.py
 
 tup1 = (1983, 2012);
 tup2 = ('Nursalim', 'Naura Krasiva');
 
-# Buatlah variable tuples baru untuk mengumpulkan hasil penggabungan
+\# Buatlah variable tuples baru untuk mengumpulkan hasil penggabungan
 tup3 = tup1 + tup2;
 print (tup3)
-
+\begin{verbatim}
 Jika Kita menjalankan program diatas, maka akan mendapatkan hasil sebagai berikut:
 
 (1983, 2012, 'Nursalim', 'Naura Krasiva')
@@ -534,14 +535,14 @@ tuple(seq), dipakai untuk mengubah atau mengkonversi dari list menjadi tuples.
 Fungsi len(tuple) dipakai untuk menghitung panjang sebuah tuples.
 
 Contoh pada Program
-
+\begin{verbatim}
 \# Nama File : tuples_length.py
 
 tuple1, tuple2 = (123, 'xyz', 'zara'), (456, 'abc')
 
 print ("Panjang tuple1 : ", len(tuple1))
 print ("Panjang tuple2 : ", len(tuple2))
-
+\end{verbatim}
 Jika program diatas Kita jalankan, maka akan memperlihatkan output sebagai berikut:
 
 Panjang tuple1 :  3
@@ -554,7 +555,7 @@ Panjang tuple2 :  2
 Fungsi max(tuple) dipakai untuk memperlihatkan nilai maksimum pada elemen yang ada dalam tuples.
 
 Contoh pada Program
-
+\begin{verbatim}
 \# Nama File : tuples_max.py
 
 tuple1, tuple2 = ("dodol", 'xyz', 'zara', 'abc'), (100, -200, 300)
@@ -570,12 +571,12 @@ Max value tuple2 :  300
 
 
 min(tuple)
-
+\end{verbatim}
 
 Fungsi pada min(tuple) dipakai untuk memperlihatkan nilai minimum pada elemen yang ada di dalam tuples.
 
 Contoh Program
-
+\begin{verbatim}
 \# Nama File : tuples_min.py
 
 tuple1, tuple2 = ("dodol", 'xyz', 'zara', 'abc'), (100, -200, 300)
@@ -587,7 +588,7 @@ Jika program yang ada diatas Kita jalankan, maka akan memperlihatkan output seba
 
 Min value tuple1 :  abc
 Min value tuple2 :  -200
-
+\end{verbatim}
 
 \subsection tuple(seq)
 
@@ -595,14 +596,14 @@ Min value tuple2 :  -200
 Fungsi pada tuple(seq) dipakai untuk mengganti atau mengkonversi pada list menjadi tuples.
 
 Contoh Program
-
+\begin{verbatim}
 \# Nama File : tuples_tuple.py
 
 aList = (123, 'xyz', 'zara', 'abc');
 aTuple = tuple(aList)
 
 print ("Tuple elements : ", aTuple)
-
+\end{verbatim}
 
 Jika pada program diatas Kita jalankan, maka akan memperlihatkan output sebagai berikut:
 
